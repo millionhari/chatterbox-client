@@ -97,7 +97,7 @@ ul {
 
 .sidebar {
     float: left;
-    height: 855px;
+    height: 857px;
     width: 140px;
     background-color: #333333;
     color: white;
@@ -108,12 +108,16 @@ ul {
     padding-bottom: 5px;
 }
 
+.sidebar li:hover {
+    cursor: pointer;
+}
+
 .messagewrapper {
 
 }
 
 input.messagetext {
-    width: 85%;
+    width: 85.25%;
     height: 31px;
     display: inline;
     font-size: 15px;
