@@ -59,8 +59,11 @@ form input[type=text] {
     padding: 5px;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .chat {
-    padding: 5px;
     margin-bottom: 5px;
     background-color: #eee;
     height: 500px;
@@ -69,6 +72,10 @@ form input[type=text] {
 
 .chat .username {
     font-weight: 800;
+}
+
+.chat li {
+    border-bottom: 2px solid white;
 }
 
 .chat:hover {
@@ -83,4 +90,11 @@ form input[type=text] {
 
 .spinner img {
     padding: 10px;
+}
+
+.sidebar {
+    float: left;
+    height: 500px;
+    width: 100px;
+    background-color: grey;
 }

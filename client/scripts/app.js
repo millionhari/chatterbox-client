@@ -1,10 +1,23 @@
-var username = window.location.search.replace("?username=", "").replace("%20", " ");
+var msgUsername = window.location.search.replace("?username=", "").replace("%20", " ");
 
-var app = {
-  'username': 'fart monkey',
-  'text': 'how are you hr24?',
-  'roomname': '4chan'
-};
+var msgText = "";
+var msgRoom = "";
+var app = {};
+
+//JQuery
+$(document).ready(function(){
+  $('.sendmessage').click(function(){
+    msgText = $(".messagetext").val();
+    app = {
+      'username': msgUsername,
+      'text': msgText,
+      'roomname': 'poopface'
+    };
+    sendMessages();
+    $(".messagetext").val("");
+  });
+
+});
 
 var sendMessages = function(){
   $.ajax({
@@ -33,10 +46,11 @@ var getMessages = function(){
     contentType: 'application/json',
     success: function (data) {
       //_.each(data['results'], function(x){
-      for(var i = 0; i < data['results'].length; i++){
-        var data = _.escape(data['results'][i].username+" : "+data['results'][i].text)
-        $(".chat ul").prepend("<li>"+ data +"</li>");
-      }
+      $(".chat ul").empty();
+      _.each(data['results'], function(x){
+        var data = _.escape(x.username+" : "+x.text)
+        $(".chat ul").append("<li>"+ data +"</li>");
+      })
     },
     error: function (data) {
       // see: https://developer.mozilla.org/en-US/docs/Web/API/console.error
@@ -45,4 +59,5 @@ var getMessages = function(){
   });
 };
 
+getMessages();
 setInterval(getMessages, 1000);
