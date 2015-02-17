@@ -1,25 +1,22 @@
 body {
     background: #eee;
     text-align: center;
-    padding: 0 25px;
-    font-family: arial, sans-serif;
+    font-family: 'Open Sans', sans-serif, arial;
 }
 
 #main {
-    width: 500px;
+    width: 100%;
     margin: auto;
     text-align: left;
     background: white;
-    padding: 50px 60px;
     border: solid #ddd;
     border-width: 0 1px 1px 1px;
 }
 
 #main h1 {
-    margin-top: 0;
     font-size: 35px;
-    margin-bottom: 5px;
-    padding: 5px;
+    padding: 20px;
+    margin: 0;
 }
 
 #main h1 span {
@@ -27,7 +24,7 @@ body {
 }
 
 #main ul {
-    padding-left: 20px;
+    padding: 0;
 }
 
 #main .error {
@@ -44,6 +41,12 @@ body {
     font-size: 12px;
     color: green;
     line-height: 13px;
+}
+
+.topbar {
+    background-color: #333333;
+    margin: 0;
+    color: white;
 }
 
 form {
@@ -64,9 +67,8 @@ ul {
 }
 
 .chat {
-    margin-bottom: 5px;
     background-color: #eee;
-    height: 500px;
+    height: 820px;
     overflow: auto;
 }
 
@@ -76,9 +78,10 @@ ul {
 
 .chat li {
     border-bottom: 2px solid white;
+    padding: 12px;
 }
 
-.chat:hover {
+.chat li:hover {
     background-color: #ddd;
 }
 
@@ -94,7 +97,51 @@ ul {
 
 .sidebar {
     float: left;
-    height: 500px;
-    width: 100px;
-    background-color: grey;
+    height: 855px;
+    width: 140px;
+    background-color: #333333;
+    color: white;
+}
+
+.sidebar li {
+    padding-left: 12px;
+    padding-bottom: 5px;
+}
+
+.messagewrapper {
+
+}
+
+input.messagetext {
+    width: 85%;
+    height: 31px;
+    display: inline;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.sendmessage {
+    color: white    ;
+    vertical-align: middle;
+    margin-top:10px;
+    font-size: 20px;
+    padding: 4px 30px;
+    width: 150px;
+    height: 47px;
+    background-color: #333333;
+    border: 2px black solid;
+    text-align: center;
+    display: inline;
+    font-weight: 700;
+    margin-left: -5px;
+}
+
+.sendmessage:hover {
+    cursor: pointer;
+    background-color: slategrey;
+}
+
+.sendmessage:active {
+    cursor: pointer;
+    background-color: black;
 }

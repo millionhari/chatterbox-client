@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>chatterbox</title>
     <link rel="stylesheet" href="styles/styles.css">
-
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <!-- dependencies -->
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/underscore/underscore-min.js"></script>
@@ -13,9 +13,10 @@
     <script src="env/config.js"></script>
     <script src="scripts/app.js"></script>
   </head>
-  <body>
-    <div id="main">
-      <h1>chatterbox</h1>
+  <body id="main">
+    <div class="topbar">
+      <h1>#chatterbox</h1>
+    </div>
       <!-- Your HTML goes here! -->
       <div class="sidebar">
         <ul>
@@ -30,8 +31,10 @@
       <div class="chat">
         <ul></ul>
       </div>
-          Message: <input class ="messagetext" type="text" name="text"><br>
-          <input class="sendmessage" type="submit" value="Submit">
-    </div>
+      <div class="message-wrapper">
+          <input class ="messagetext" type="text" name="text">
+          <div class="sendmessage">Send</div>
+      </div>
+
   </body>
 </html>

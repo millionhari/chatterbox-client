@@ -17,6 +17,10 @@ $(document).ready(function(){
     $(".messagetext").val("");
   });
 
+  $('.sendmessage').keypress(function (e) {
+
+});
+
 });
 
 var sendMessages = function(){
