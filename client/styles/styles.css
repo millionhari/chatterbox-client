@@ -4,6 +4,11 @@ body {
     font-family: 'Open Sans', sans-serif, arial;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 #main {
     width: 100%;
     margin: auto;
@@ -13,7 +18,7 @@ body {
     border-width: 0 1px 1px 1px;
 }
 
-#main h1 {
+.chatterbox-title {
     font-size: 35px;
     padding: 20px;
     margin: 0;
@@ -25,6 +30,7 @@ body {
 
 #main ul {
     padding: 0;
+    margin: 0;
 }
 
 #main .error {
@@ -104,12 +110,12 @@ ul {
 }
 
 .sidebar li {
-    padding-left: 12px;
-    padding-bottom: 5px;
+    padding: 5px 12px;
 }
 
 .sidebar li:hover {
     cursor: pointer;
+    background-color: slategrey;
 }
 
 .messagewrapper {
@@ -133,7 +139,7 @@ input.messagetext {
     width: 150px;
     height: 47px;
     background-color: #333333;
-    border: 2px black solid;
+    border: 2px #333333 solid;
     text-align: center;
     display: inline;
     font-weight: 700;
@@ -148,4 +154,26 @@ input.messagetext {
 .sendmessage:active {
     cursor: pointer;
     background-color: black;
+}
+
+.new-room-text-button {
+    color: #333333;
+    vertical-align: middle;
+    font-size: 15px;
+    padding: 3px 25px;
+    background-color: white;
+    max-width: 85%;
+    border: 2px #333333 solid;
+    text-align: center;
+    font-weight: 700;
+}
+
+.new-room-text-button:hover {
+    cursor: pointer;
+}
+
+.new-room-text {
+    width: 94%;
+    display: inline;
+    font-size: 15px;
 }
