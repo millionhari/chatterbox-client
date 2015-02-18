@@ -1,7 +1,8 @@
 body {
     background: #eee;
     text-align: center;
-    font-family: 'Open Sans', sans-serif, arial;
+    font-family: 'Bitter', serif;
+    /*font-family: 'Open Sans', sans-serif, arial;*/
 }
 
 a {
@@ -104,13 +105,14 @@ ul {
 .sidebar {
     float: left;
     height: 857px;
-    width: 140px;
+    width: 160px;
     background-color: #333333;
     color: white;
 }
 
 .sidebar li {
     padding: 5px 12px;
+    word-wrap: break-word;
 }
 
 .sidebar li:hover {
@@ -123,7 +125,7 @@ ul {
 }
 
 input.messagetext {
-    width: 85.25%;
+    width: 85%;
     height: 34px;
     border: 0;
     display: inline;
@@ -132,7 +134,7 @@ input.messagetext {
 }
 
 .sendmessage {
-    color: white    ;
+    color: white;
     vertical-align: middle;
     margin-top:10px;
     font-size: 20px;
@@ -182,4 +184,9 @@ input.messagetext {
 
 .friends-bold {
     font-weight: bold;
+}
+
+.friends {
+    font-family: 'Bitter', serif;
+    cursor: pointer;
 }

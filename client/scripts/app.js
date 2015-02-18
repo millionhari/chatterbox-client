@@ -42,7 +42,7 @@ $(document).ready(function(){
     console.log(roomNameText);
   });
 
-  //On click name
+  //On click name, bold
   $('.chat').on('click', '.friends', function(){
     var friendsName = $(this).text();
     if (arrayOfFriends.indexOf(friendsName) === -1){
@@ -94,7 +94,8 @@ var getMessages = function(){
         if (arrayOfRooms.indexOf(x.roomname) === -1 && x.roomname !== undefined){
           $('.sidebar ul').append("<li class='room'>#"+x.roomname+"</li>");
         }
-      })
+
+      });
     },
     error: function (data) {
       // see: https://developer.mozilla.org/en-US/docs/Web/API/console.error
