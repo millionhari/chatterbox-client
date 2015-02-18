@@ -124,7 +124,8 @@ ul {
 
 input.messagetext {
     width: 85.25%;
-    height: 31px;
+    height: 34px;
+    border: 0;
     display: inline;
     font-size: 15px;
     padding-left: 10px;
@@ -163,7 +164,6 @@ input.messagetext {
     padding: 3px 25px;
     background-color: white;
     max-width: 85%;
-    border: 2px #333333 solid;
     text-align: center;
     font-weight: 700;
 }
@@ -173,7 +173,13 @@ input.messagetext {
 }
 
 .new-room-text {
-    width: 94%;
+    width: 96%;
+    border: 0;
     display: inline;
     font-size: 15px;
+    padding: 3px;
+}
+
+.friends-bold {
+    font-weight: bold;
 }

@@ -6,7 +6,7 @@ var app = {};
 var sendRoomName;
 var dynamicData = "";
 var roomNameText = "";
-
+var arrayOfFriends = [];
 //JQuery
 $(document).ready(function(){
   //On click room
@@ -42,6 +42,13 @@ $(document).ready(function(){
     console.log(roomNameText);
   });
 
+  //On click name
+  $('.chat').on('click', '.friends', function(){
+    var friendsName = $(this).text();
+    if (arrayOfFriends.indexOf(friendsName) === -1){
+      arrayOfFriends.push(friendsName);
+    }
+  });
 });
 
 
@@ -76,8 +83,13 @@ var getMessages = function(){
     success: function (data) {
       $(".chat ul").empty();
       _.each(data['results'], function(x){
-        var userinfo = _.escape(x.username+" : "+x.text);
-        $(".chat ul").append("<li>"+ userinfo +"</li>");
+        var escapedUsername = _.escape(x.username);
+        var escapedText = _.escape(" : "+x.text);
+        if (arrayOfFriends.indexOf(escapedUsername) !== -1){
+          $(".chat ul").append("<li class='friends-bold'>"+ "<span class='friends'>"+escapedUsername+"</span>" + escapedText +"</li>");
+        } else {
+          $(".chat ul").append("<li>"+ "<span class='friends'>"+escapedUsername+"</span>" + escapedText +"</li>");
+        }
         var arrayOfRooms = $('.sidebar li').text().split("#");
         if (arrayOfRooms.indexOf(x.roomname) === -1 && x.roomname !== undefined){
           $('.sidebar ul').append("<li class='room'>#"+x.roomname+"</li>");
